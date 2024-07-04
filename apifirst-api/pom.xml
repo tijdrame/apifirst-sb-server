@@ -65,6 +65,7 @@
                             <generateSupportingFiles>false</generateSupportingFiles>
                             <generateAliasAsModel>false</generateAliasAsModel>
                             <generateApis>false</generateApis>
+                            <generateModelTests>false</generateModelTests>
                             <modelPackage>ord.emard.apifirst.model</modelPackage>
                             <configOptions>
                                 <sourceFolder>src/gen/java/main</sourceFolder>
