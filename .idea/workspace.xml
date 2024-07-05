@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d066a668-9e08-439b-9993-dac1a61cc612" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/CustomerRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/CustomerServiceImpl.java" afterDir="false" />
+    <list default="true" id="d066a668-9e08-439b-9993-dac1a61cc612" name="Changes" comment="add controler for getCustomers and getCustomerById">
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/OrderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apifirst-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apifirst-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/ApifirstServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/ApifirstServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,17 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tidiane/OneDrive - Alithya/Documents/cours/api_first/apifirst-sb-server/apifirst-server/pom.xml&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
+    "last_opened_file_path": "C:/Users/tidiane/OneDrive - Alithya/Documents/cours/api_first/apifirst-sb-server/apifirst-server/pom.xml"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn clean" />
       <command value="mvn clean install" />
     </option>
   </component>
@@ -108,6 +112,14 @@
       <option name="presentableId" value="Default" />
       <updated>1719935879189</updated>
     </task>
+    <task id="LOCAL-00001" summary="add controler for getCustomers and getCustomerById">
+      <created>1720059837537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720059837537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,5 +132,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add controler for getCustomers and getCustomerById" />
+    <option name="LAST_COMMIT_MESSAGE" value="add controler for getCustomers and getCustomerById" />
   </component>
 </project>
