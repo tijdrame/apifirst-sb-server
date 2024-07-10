@@ -3,7 +3,10 @@ package com.emard.apifirst.controllers;
 import com.emard.apifirst.repositories.CustomerRepository;
 import com.emard.apifirst.repositories.OrderRepository;
 import com.emard.apifirst.repositories.ProductRepository;
+import jakarta.servlet.Filter;
 import ord.emard.apifirst.model.Customer;
+import ord.emard.apifirst.model.Order;
+import ord.emard.apifirst.model.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,11 +25,19 @@ public class BaseTest {
     OrderRepository orderRepository;
     @Autowired
     WebApplicationContext wac;
+    @Autowired
+    Filter validationFilter;
     public MockMvc mockMvc;
     Customer testCustomer;
+    Product testProduct;
+    Order testOrder;
     @BeforeEach
     void setup(){
-        mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
+        mockMvc = MockMvcBuilders.webAppContextSetup(wac)
+                .addFilter(validationFilter)
+                .build();
         testCustomer = customerRepository.findAll().iterator().next();
+        testProduct = productRepository.findAll().iterator().next();
+        testOrder = orderRepository.findAll().iterator().next();
     }
 }

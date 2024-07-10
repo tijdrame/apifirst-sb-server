@@ -12,6 +12,9 @@
 	<artifactId>apifirst-server</artifactId>
 	<name>apifirst-server</name>
 	<description>Demo project for Spring Boot</description>
+	<properties>
+		<swagger.request.validator.version>2.39.0</swagger.request.validator.version>
+	</properties>
 	<url/>
 	<licenses>
 		<license/>
@@ -51,6 +54,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.atlassian.oai</groupId>
+			<artifactId>swagger-request-validator-spring-webmvc</artifactId>
+			<version>${swagger.request.validator.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
