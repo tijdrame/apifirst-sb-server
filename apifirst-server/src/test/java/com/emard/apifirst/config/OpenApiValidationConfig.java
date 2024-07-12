@@ -14,8 +14,8 @@ public class OpenApiValidationConfig {
     @Bean
     public Filter validationFilter(){
         return new OpenApiValidationFilter(
-false,//enable request validation
-                false//enable response validation
+true,//enable request validation
+                true//enable response validation
         );
     }
     @Bean

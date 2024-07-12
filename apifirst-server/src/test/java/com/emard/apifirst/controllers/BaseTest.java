@@ -7,6 +7,7 @@ import jakarta.servlet.Filter;
 import ord.emard.apifirst.model.Customer;
 import ord.emard.apifirst.model.Order;
 import ord.emard.apifirst.model.Product;
+import org.apache.commons.codec.binary.Base64;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,6 +32,7 @@ public class BaseTest {
     Customer testCustomer;
     Product testProduct;
     Order testOrder;
+    String basicDigestHeaderValue = "Basic " + new String(Base64.encodeBase64(("<username>:<password>").getBytes()));
     @BeforeEach
     void setup(){
         mockMvc = MockMvcBuilders.webAppContextSetup(wac)

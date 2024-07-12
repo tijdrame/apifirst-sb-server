@@ -14,6 +14,7 @@ class OrderControllerTest extends BaseTest{
     @Test
     void listOrders() throws Exception {
         mockMvc.perform(get(BASE_URL)
+                        .header("Authorization", basicDigestHeaderValue)
                         .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()", greaterThan(0)));
@@ -22,6 +23,7 @@ class OrderControllerTest extends BaseTest{
     @Test
     void getProductById() throws Exception {
         mockMvc.perform(get(BASE_URL+"/{orderId}", testOrder.getId())
+                        .header("Authorization", basicDigestHeaderValue)
                         .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(testOrder.getId().toString()));

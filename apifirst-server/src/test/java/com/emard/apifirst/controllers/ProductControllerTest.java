@@ -1,5 +1,6 @@
 package com.emard.apifirst.controllers;
 
+import org.apache.commons.codec.binary.Base64;
 import org.junit.jupiter.api.Test;
 
 import static com.emard.apifirst.controllers.ProductController.BASE_URL;
@@ -14,6 +15,7 @@ class ProductControllerTest extends BaseTest{
     @Test
     void listProducts() throws Exception {
         mockMvc.perform(get(BASE_URL)
+                        .header("Authorization", basicDigestHeaderValue)
                         .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()", greaterThan(0)));
@@ -21,7 +23,9 @@ class ProductControllerTest extends BaseTest{
 
     @Test
     void getProductById() throws Exception {
+
         mockMvc.perform(get(BASE_URL+"/{productId}", testProduct.getId())
+                        .header("Authorization", basicDigestHeaderValue)
                         .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(testProduct.getId().toString()));

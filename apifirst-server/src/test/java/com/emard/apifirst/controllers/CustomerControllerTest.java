@@ -17,6 +17,7 @@ public class CustomerControllerTest extends BaseTest {
     @Test
     void testListCustomers() throws Exception {
         mockMvc.perform(get(BASE_URL)
+                        .header("Authorization", basicDigestHeaderValue)
                 .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.length()", greaterThan(0)));
@@ -25,6 +26,7 @@ public class CustomerControllerTest extends BaseTest {
     @Test
     void testGetCustomerById() throws Exception {
         mockMvc.perform(get(BASE_URL+"/{customerId}", testCustomer.getId().toString())
+                        .header("Authorization", basicDigestHeaderValue)
                         .accept(APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(testCustomer.getId().toString()));
