@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d066a668-9e08-439b-9993-dac1a61cc612" name="Changes" comment="add controler for getCustomers and getCustomerById">
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/OrderRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/repositories/ProductRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductServiceImpl.java" afterDir="false" />
+    <list default="true" id="d066a668-9e08-439b-9993-dac1a61cc612" name="Changes" comment="add create customer and product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/services/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/controllers/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/controllers/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/controllers/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/controllers/CustomerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/controllers/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/apifirst-server/src/test/java/com/emard/apifirst/controllers/ProductControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -50,56 +49,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-22",
-    "last_opened_file_path": "C:/Users/tidiane/OneDrive - Alithya/Documents/cours/api_first/apifirst-sb-server/apifirst-server/pom.xml"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tidiane/OneDrive - Alithya/Documents/cours/api_first/apifirst-sb-server/apifirst-server/pom.xml&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.emard.apifirst.controllers" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
       <command value="mvn clean install" />
+      <command value="mvn clean install -D skipTests" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ApifirstServerApplication">
-    <configuration name="ApifirstServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.emard.apifirst.ApifirstServerApplication" />
+  <component name="RunManager" selected="JUnit.CustomerControllerTest.testCreateCustomer">
+    <configuration name="All in apifirst-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="apifirst-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.emard.apifirst.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApifirstServerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerControllerTest.testCreateCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="apifirst-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.emard.apifirst.*" />
+          <option name="PATTERN" value="com.emard.apifirst.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.emard.apifirst" />
-      <option name="MAIN_CLASS_NAME" value="com.emard.apifirst.ApifirstServerApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="com.emard.apifirst.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.emard.apifirst.controllers.CustomerControllerTest" />
+      <option name="METHOD_NAME" value="testCreateCustomer" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderControllerTest.getProductById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="apifirst-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emard.apifirst.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.emard.apifirst.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.emard.apifirst.controllers.OrderControllerTest" />
+      <option name="METHOD_NAME" value="getProductById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.testCreateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="apifirst-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emard.apifirst.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.emard.apifirst.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.emard.apifirst.controllers.ProductControllerTest" />
+      <option name="METHOD_NAME" value="testCreateProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.emard.apifirst.controllers in apifirst-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="apifirst-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emard.apifirst.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.emard.apifirst.controllers" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApifirstServerApplication" />
-        <item itemvalue="JUnit.ApifirstServerApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.CustomerControllerTest.testCreateCustomer" />
+        <item itemvalue="JUnit.ProductControllerTest.testCreateProduct" />
+        <item itemvalue="JUnit.All in apifirst-server" />
+        <item itemvalue="JUnit.OrderControllerTest.getProductById" />
+        <item itemvalue="JUnit.com.emard.apifirst.controllers in apifirst-server" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +173,35 @@
       <option name="project" value="LOCAL" />
       <updated>1720059837537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add controler for for product and order">
+      <created>1720141952807</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720141952807</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add test for customer controller">
+      <created>1720227344705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720227344705</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add test for CustomerControllerTest OrderControllerTest and ProductControllerTest">
+      <created>1720626373522</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720626373522</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add test for CustomerControllerTest OrderControllerTest and ProductControllerTest">
+      <created>1720798828815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720798828815</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +217,36 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add controler for getCustomers and getCustomerById" />
-    <option name="LAST_COMMIT_MESSAGE" value="add controler for getCustomers and getCustomerById" />
+    <MESSAGE value="add controler for for product and order" />
+    <MESSAGE value="add test for customer controller" />
+    <MESSAGE value="add test for CustomerControllerTest OrderControllerTest and ProductControllerTest" />
+    <MESSAGE value="add create customer and product" />
+    <option name="LAST_COMMIT_MESSAGE" value="add create customer and product" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/OrderController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/controllers/OrderController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/apifirst-server/src/main/java/com/emard/apifirst/bootstrap/DataLoader.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

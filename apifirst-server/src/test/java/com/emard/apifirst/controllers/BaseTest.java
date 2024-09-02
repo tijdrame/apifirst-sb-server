@@ -3,6 +3,7 @@ package com.emard.apifirst.controllers;
 import com.emard.apifirst.repositories.CustomerRepository;
 import com.emard.apifirst.repositories.OrderRepository;
 import com.emard.apifirst.repositories.ProductRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.Filter;
 import ord.emard.apifirst.model.Customer;
 import ord.emard.apifirst.model.Order;
@@ -28,6 +29,8 @@ public class BaseTest {
     WebApplicationContext wac;
     @Autowired
     Filter validationFilter;
+    @Autowired
+    ObjectMapper objectMapper;
     public MockMvc mockMvc;
     Customer testCustomer;
     Product testProduct;
